@@ -18,7 +18,7 @@
 
             <div class="form-group">
                 <div class="col-md-4">
-                    <button type="submit" name="save" onclick="addGenre()" class="btn btn-primary">Enter</button>
+                    <input type="button" name="save" onclick="addGenre()" value="Add" class="btn btn-primary">
                 </div>
             </div>
 

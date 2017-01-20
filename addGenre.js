@@ -3,15 +3,15 @@ function addGenre() {
 
     $.ajax({
         type: "POST",
-        url: 'genre',
+        url: 'genre/add',
         data: {
             name_genre: name
         },
         success: function (response) {
-
+            console.log(response);
+            //ovde uradi reload stranice ili redirekciju ili tako nesto
         },
         error: function (error) {
-            console.log(name);
             console.log("Error: " + error.message);
         }
     });
