@@ -2,26 +2,22 @@ $(document).ready(function () {
     getGenres();
 });
 
-function addBand() {
-    var name = $('#name_band').val();
-    var yearsActive = ($('#year_from').val()).concat(' - ', ($('#year_now').val()));
+function updateBand() {
+    var id = $('#id').val();
+    var name_band = $('#name_band').val();
+    var years_active = $('#year_from').val() + ' - ' + $('#year_now').val();
     var country = $('#country').val();
-    var genre = $('#genres').val();
+    var id_genre = $('#genres').val();
 
     $.ajax({
-        type: "POST",
-        url: 'band/add',
-        data: {
-            name_band: name,
-            years_active: yearsActive,
-            id_band: country,
-            id_genre: genre
-        },
-        success: function (response) {
+        type: "PUT",
+        url: 'band/edit/' + id + '/' + name_band + '/' + years_active + '/' + country + '/' + id_genre ,
+        dataType: 'json',
+        success: function () {
             window.location.href = 'bands.php';
         },
         error: function (error) {
-            alert("Error: " + error);
+            alert("Error: " + JSON.parse(error));
         }
     });
 }

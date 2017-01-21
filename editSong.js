@@ -1,32 +1,25 @@
-$(document).ready(function(){
-    getBands();
+$(document).ready(function () {
     getGenres();
+    getBands();
     getAlbums();
 });
 
-
-
-
-function addSong() {
-    var name = $('#name_song').val();
-    var album = $('#albums').val();
-    var band = $('#bands').val();
-    var genre = $('#genres').val();
+function updateSong() {
+    var id = $('#id').val();
+    var name_song = $('#name_song').val();
+    var id_album = $('#albums').val();
+    var id_band = $('#bands').val();
+    var id_genre = $('#genres').val();
 
     $.ajax({
-        type: "POST",
-        url: 'song/add',
-        data: {
-            name_song: name,
-            id_album: album,
-            id_band: band,
-            id_genre: genre
-        },
-        success: function (response) {
+        type: "PUT",
+        url: 'song/edit/' + id + '/' + name_song + '/' + id_album + '/' + id_band + '/' + id_genre ,
+        dataType: 'json',
+        success: function () {
             window.location.href = 'songs.php';
         },
         error: function (error) {
-            alert("Error: " + error);
+            alert("Error: " + JSON.parse(error));
         }
     });
 }
@@ -37,6 +30,7 @@ function getGenres() {
         url: 'genre/all',
         dataType: 'json',
         success: function (response) {
+            console.log('usepsnoooooo');
             if(response == null || response.length == 0) {
                 $('#genres').append('<option value=""> There are no genres available.</option>');
             }
@@ -49,6 +43,7 @@ function getGenres() {
             }
         },
         error: function (error) {
+            console.log('greskaaaa');
             alert("Error: " + error.status);
         }
     });

@@ -3,12 +3,13 @@ include ('layout.php');
 
 ?>
 
-<script src="addAlbum.js"></script>
+<script src="editAlbum.js"></script>
 <div class="container">
-    <form class="well form-horizontal">
+    <form class="well form-horizontal" action="editAlbum.php.php" method="post" id="album_form">
         <fieldset>
 
-            <legend>Add New Album</legend>
+            <legend>Edit Album</legend>
+            <input name="id" placeholder="id" id="id" value="<?php echo $_GET['id'] ?>" class="form-control" type="hidden">
 
             <div class="form-group">
                 <label class="col-md-4 control-label">Name</label>
@@ -28,7 +29,7 @@ include ('layout.php');
             <div class="form-group">
                 <label class="col-md-4 control-label">Choose Band</label>
                 <div class="col-md-4 form-inline">
-                    <select name="band" id="bands" class="form-control right" required>
+                    <select name="bands" id="bands" class="form-control right" required>
                     </select>
                 </div>
             </div>
@@ -38,11 +39,11 @@ include ('layout.php');
             <div class="form-group">
                 <label class="col-md-4 control-label">Choose Genre</label>
                 <div class="col-md-4 form-inline">
-                    <select name="genre" id="genres" class="form-control right" required>
+                    <select name="genres" id="genres" class="form-control right" required>
                     </select>
                 </div>
                 <div class="col-md-4 form-inline">
-                    <input type="button" name="save" value="Add" onclick="addAlbum()" class="btn btn-primary">
+                    <input type="button" name="save" value="Update" onclick="updateAlbum()" class="btn btn-primary">
                 </div>
             </div>
 

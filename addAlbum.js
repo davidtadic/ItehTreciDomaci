@@ -1,3 +1,9 @@
+$(document).ready(function(){
+   getBands();
+    getGenres();
+});
+
+
 function addAlbum() {
     var name = $('#name_album').val();
     var year = $('#year_published').val();
@@ -8,13 +14,13 @@ function addAlbum() {
         type: "POST",
         url: 'album/add',
         data: {
-            name_band: name,
+            name_album: name,
             year_published: year,
             id_band: band,
             id_genre: genre
         },
         success: function (response) {
-            window.location.href = 'album.php';
+            window.location.href = 'albums.php';
         },
         error: function (error) {
             alert("Error: " + error);

@@ -1,11 +1,23 @@
-<script src="js/jquery-3.1.1.min.js"></script>
-<script src="jquery.tablesorter.min.js" type="text/javascript"></script>
+<!DOCTYPE HTML>
+<html>
+<header>
+    <script src="js/jquery-3.1.1.min.js"></script>
+    <!-- Bootstrap -->
 
-<link href="css/bootstrap.min.css" type="text/css" rel="stylesheet">
-<link href="css/bootstrap-theme.min.css" type="text/css" rel="stylesheet">
-<link href="style.css" type="text/css" rel="stylesheet">
-<script src="js/bootstrap.min.js"></script>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css"
+          integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap-theme.min.css"
+          integrity="sha384-rHyoN1iRsVXV4nD0JutlnGaslCJuC7uwjduW9SVrLvRYooPp2bWYgmgJQIXwl/Sp" crossorigin="anonymous">
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"
+            integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa"
+            crossorigin="anonymous"></script>
+    <script src="jquery.tablesorter.min.js"></script>
 
+    <link href="style.css" type="text/css" rel="stylesheet">
+
+</header>
+
+<body>
 <nav class="navbar navbar-inverse">
     <div class="container-fluid">
         <div class="navbar-header">
@@ -15,15 +27,15 @@
                 <span class="icon-bar"></span>
                 <span class="icon-bar"></span>
             </button>
-            <a class="navbar-brand" href="index.php">Hard Rock Music</a>
+            <a class="navbar-brand" href="home.php">Hard Rock Music</a>
         </div>
 
         <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
             <ul class="nav navbar-nav">
-                <li><a href="genre.php">Genre <span class="sr-only">(current)</span></a></li>
-                <li><a href="band.php">Bands</a></li>
-                <li><a href="album.php">Albums</a></li>
-                <li><a href="song.php">Songs</a></li>
+                <li><a href="genres.php">Genre <span class="sr-only">(current)</span></a></li>
+                <li><a href="bands.php">Bands</a></li>
+                <li><a href="albums.php">Albums</a></li>
+                <li><a href="songs.php">Songs</a></li>
             </ul>
             <ul class="nav navbar-nav navbar-right">
                 <li class="dropdown">
@@ -39,4 +51,7 @@
         </div>
     </div>
 </nav>
+</body>
+
+</html>
 

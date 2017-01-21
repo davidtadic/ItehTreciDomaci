@@ -8,8 +8,7 @@ function addGenre() {
             name_genre: name
         },
         success: function (response) {
-            console.log(response);
-            //ovde uradi reload stranice ili redirekciju ili tako nesto
+            window.location.href = 'genres.php';
         },
         error: function (error) {
             console.log("Error: " + error.message);

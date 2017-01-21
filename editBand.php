@@ -2,12 +2,14 @@
 include ('layout.php');
 
 ?>
-<script src="addBand.js"></script>
+
+<script src="editBand.js"></script>
 <div class="container">
-    <form class="well form-horizontal" action=" " method="get" id="band_form">
+    <form class="well form-horizontal" action="editBand.php" method="post" id="band_form">
         <fieldset>
 
-            <legend>Add New Band</legend>
+            <legend>Edit Band</legend>
+            <input name="id" placeholder="id" id="id" value="<?php echo $_GET['id'] ?>" class="form-control" type="hidden">
 
             <div class="form-group">
                 <label class="col-md-4 control-label">Name</label>
@@ -38,11 +40,11 @@ include ('layout.php');
             <div class="form-group">
                 <label class="col-md-4 control-label">Choose Genre</label>
                 <div class="col-md-4 form-inline">
-                    <select name="genre" id="genres" class="form-control right" required>
+                    <select name="genres" id="genres" class="form-control right" required>
                     </select>
                 </div>
                 <div class="col-md-4 form-inline">
-                    <input type="button" name="save" value="Add" onclick="addBand()" class="btn btn-primary">
+                    <input type="button" name="save" value="Update" onclick="updateBand()" class="btn btn-primary">
                 </div>
             </div>
 

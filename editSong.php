@@ -1,12 +1,13 @@
 <?php
 include ('layout.php');
 ?>
-<script src="addSong.js"></script>
+<script src="editSong.js"></script>
 <div class="container">
     <form class="well form-horizontal">
         <fieldset>
 
-            <legend>Add New Song</legend>
+            <legend>Edit Song</legend>
+            <input name="id" placeholder="id" id="id" value="<?php echo $_GET['id'] ?>" class="form-control" type="hidden">
 
             <div class="form-group">
                 <label class="col-md-4 control-label">Name</label>
@@ -20,7 +21,7 @@ include ('layout.php');
             <div class="form-group">
                 <label class="col-md-4 control-label">Album</label>
                 <div class="col-md-4 form-inline">
-                    <select name="album" id="albums" class="form-control right" required>
+                    <select name="albums" id="albums" class="form-control right" required>
                     </select>
                 </div>
             </div>
@@ -28,7 +29,7 @@ include ('layout.php');
             <div class="form-group">
                 <label class="col-md-4 control-label">Band/Artist</label>
                 <div class="col-md-4 form-inline">
-                    <select name="band" id="bands" class="form-control right" required>
+                    <select name="bands" id="bands" class="form-control right" required>
                     </select>
                 </div>
             </div>
@@ -38,11 +39,11 @@ include ('layout.php');
             <div class="form-group">
                 <label class="col-md-4 control-label">Choose Genre</label>
                 <div class="col-md-4 form-inline">
-                    <select name="genre" id="genres" class="form-control right" required>
+                    <select name="genres" id="genres" class="form-control right" required>
                     </select>
                 </div>
                 <div class="col-md-4 form-inline">
-                    <input type="button" name="save" value="Add" onclick="addSong()" class="btn btn-primary">
+                    <input type="button" name="save" value="Update" onclick="updateSong()" class="btn btn-primary">
                 </div>
             </div>
 
